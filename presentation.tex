@@ -1,0 +1,79 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usetheme{Madrid}
+
+\usepackage[backend=biber,style=numeric, citestyle=ieee]{biblatex}
+\addbibresource{bibliography.bib} %Imports bibliography file
+
+\title{Physics-Informed Neural Networks}
+\author{Massimo Poncino\inst{1}, Sara Vinco\inst{1}, Daniele Jahier Pagliari\inst{1}, Alessio Burrello\inst{1,}\inst{2}, Giovanni Pollo\inst{1}}
+\institute[VFU] % (optional)
+{
+  \inst{1}%
+  Politecnico di Torino
+  \and
+  \inst{2}%
+  Alma Mater Studiorum - Università di Bologna
+}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\begin{document}
+\frame{\titlepage}
+\begin{frame}
+  \frametitle{Table of Contents}
+  \tableofcontents
+\end{frame}
+
+\section{Introduction}
+\begin{frame}
+  \frametitle{Introduction}
+  \begin{itemize}
+    \item The real world is governed by physical laws
+    \item Most of them are described by complex Differential Equations (DEs)
+    \begin{itemize}
+      \item Navier-Stokes
+      \item Diffusion
+      \item Poisson–Boltzmann
+    \end{itemize}
+    \item Solving DEs is a challenging task and it is often impossible to find an analytical solution
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Introduction}
+  \begin{itemize}
+    \item Runge-Kutta methods
+    \begin{itemize}
+      \item High computational cost
+      \item Mainly used for behavioural simulations
+    \end{itemize}
+    \item Popularity growth of Deep Neural Networks (DNNs) to solve DEs \cite{deep-neural-network-for-system-of-ordinary-differential-equations-vectorized-algorithm-and-simulation}
+    \begin{itemize}
+      \item Computational cost is moved to the training phase
+      \item Possibility to 
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\section{Background}
+
+\begin{frame}
+  \frametitle{Background}
+
+\end{frame}
+
+\section{Bibliography}
+\begin{frame}
+  \frametitle{Bibliography}
+  \printbibliography
+\end{frame}
+\end{document}
