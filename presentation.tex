@@ -40,11 +40,11 @@
   \begin{itemize}
     \item The real world is governed by physical laws
     \item Most of them are described by complex Differential Equations (DEs)
-    \begin{itemize}
-      \item Navier-Stokes
-      \item Diffusion
-      \item Poisson–Boltzmann
-    \end{itemize}
+          \begin{itemize}
+            \item Navier-Stokes
+            \item Diffusion
+            \item Poisson–Boltzmann
+          \end{itemize}
     \item Solving DEs is a challenging task and it is often impossible to find an analytical solution
   \end{itemize}
 \end{frame}
@@ -53,20 +53,20 @@
   \frametitle{Introduction}
   \begin{itemize}
     \item Runge-Kutta methods
-    \begin{itemize}
-      \item High computational cost
-      \item Mainly used for behavioural simulations
-    \end{itemize}
+          \begin{itemize}
+            \item High computational cost
+            \item Mainly used for behavioural simulations
+          \end{itemize}
     \item Popularity growth of Deep Neural Networks (DNNs) to solve DEs \cite{deep-neural-network-for-system-of-ordinary-differential-equations-vectorized-algorithm-and-simulation}
-    \begin{itemize}
-      \item Computational cost is moved to the training phase
-      \item Possibility to approximate nearly any kind of function
-      \item Downside of being only data-driven
-    \end{itemize}
-      \item Neural Network with domain knowledge
-      \begin{itemize}
-        \item \textbf{Physics informed neural networks (PINNs)} 
-      \end{itemize}
+          \begin{itemize}
+            \item Computational cost is moved to the training phase
+            \item Possibility to approximate nearly any kind of function
+            \item Downside of being only data-driven
+          \end{itemize}
+    \item Neural Network with domain knowledge
+          \begin{itemize}
+            \item \textbf{Physics informed neural networks (PINNs)}
+          \end{itemize}
   \end{itemize}
 \end{frame}
 
@@ -78,21 +78,45 @@
   \begin{itemize}
     \item PINNs are a subset of the networks that exploits knowledge domain by modifying the loss function
     \item Loss of a normal neural network (i.e. Mean Squared Error):
-    $$
-    loss = MSE = \frac{1}{n} \sum_{i}^{n}(prediction - ground\_truth)
-    $$
+          $$
+            loss = MSE = \frac{1}{n} \sum_{i}^{n}(prediction - ground\_truth)
+          $$
     \item Loss a PINNs (i.e Mean Squared Error + Physics Loss):
-    $$
-    loss = data\_driven\_weight \cdot \textbf{MSE} + physics\_weight \cdot \textbf{physics\_loss}
-    $$
+          $$
+            loss = data\_driven\_weight \cdot \textbf{MSE} + physics\_weight \cdot \textbf{physics\_loss}
+          $$
+  \end{itemize}
+\end{frame}
+\begin{frame}
+  \frametitle{Background}
+  \begin{itemize}
+    \item INSERT THE GIF
+    \item Harmonic Oscillator with a spring
+          $$
+            m \frac{d^2x}{dt^2} + \mu\frac{dx}{dy} + kx = 0
+          $$
+          \begin{itemize}
+            \item $m$: mass of the oscillator
+            \item $x$: position of the oscillator
+            \item $\mu$: coefficient of friction
+            \item $k$: spring constant
+          \end{itemize}
   \end{itemize}
 \end{frame}
 
+
 \begin{frame}
   \frametitle{Background}
-
+  \begin{itemize}
+    \item Show the image of the feed-forward NN
+    \item Show the differentiation process
+    \item Insert a bit of code to show the process of the actual physics loss
+    \item insert the two gifs of normal NN and PINN
+    \item Slide saying "Are you cheating? You have more points!"
+    \item In this case yes, but think of a scenario where you are not able to generate the training point because there is not an exact solution to the problem
+    \item Then talk to how we are applying this to batteries
+  \end{itemize}
 \end{frame}
-
 
 \section{Bibliography}
 \begin{frame}
