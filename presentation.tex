@@ -7,8 +7,8 @@
 \addbibresource{bibliography.bib} %Imports bibliography file
 
 \title{Physics-Informed Neural Networks}
-\author{Massimo Poncino\inst{1}, Sara Vinco\inst{1}, Daniele Jahier Pagliari\inst{1}, Alessio Burrello\inst{1,}\inst{2}, Giovanni Pollo\inst{1}}
-\institute[VFU] % (optional)
+\author[Giovanni Pollo]{Massimo Poncino\inst{1}, Sara Vinco\inst{1}, Daniele Jahier Pagliari\inst{1}, Alessio Burrello\inst{1,}\inst{2}, Giovanni Pollo\inst{1}}
+\institute[Politecnico di Torino] % (optional)
 {
   \inst{1}%
   Politecnico di Torino
@@ -16,6 +16,8 @@
   \inst{2}%
   Alma Mater Studiorum - Università di Bologna
 }
+
+\logo{\includegraphics[height=1cm]{images/logo-polito.png}}
 
 \AtBeginSection[]
 {
@@ -58,8 +60,13 @@
     \item Popularity growth of Deep Neural Networks (DNNs) to solve DEs \cite{deep-neural-network-for-system-of-ordinary-differential-equations-vectorized-algorithm-and-simulation}
     \begin{itemize}
       \item Computational cost is moved to the training phase
-      \item Possibility to 
+      \item Possibility to approximate nearly any kind of function
+      \item Downside of being only data-driven
     \end{itemize}
+      \item Neural Network with domain knowledge
+      \begin{itemize}
+        \item \textbf{Physics informed neural networks (PINNs)} 
+      \end{itemize}
   \end{itemize}
 \end{frame}
 
@@ -68,8 +75,24 @@
 
 \begin{frame}
   \frametitle{Background}
+  \begin{itemize}
+    \item PINNs are a subset of the networks that exploits knowledge domain by modifying the loss function
+    \item Loss of a normal neural network (i.e. Mean Squared Error):
+    $$
+    loss = MSE = \frac{1}{n} \sum_{i}^{n}(prediction - ground\_truth)
+    $$
+    \item Loss a PINNs (i.e Mean Squared Error + Physics Loss):
+    $$
+    loss = data\_driven\_weight \cdot \textbf{MSE} + physics\_weight \cdot \textbf{physics\_loss}
+    $$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Background}
 
 \end{frame}
+
 
 \section{Bibliography}
 \begin{frame}
